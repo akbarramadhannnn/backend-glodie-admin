@@ -47,9 +47,9 @@ exports.updateTeamsData = async (
 ) => {
   let sql;
   if (!path) {
-    sql = `UPDATE teams SET name = '${name}', title = '${title}', twitter_link = '${twitter}', linkedin_link = '${linkedin}', description = '${desc}' WHERE teams_id = ${id}`;
+    sql = `UPDATE teams SET name = '${name}', title = '${title}', twitter_link = '${twitter}', linkedin_link = '${linkedin}', description = "${desc}" WHERE teams_id = ${id}`;
   } else {
-    sql = `UPDATE teams SET name = '${name}', title = '${title}', twitter_link = '${twitter}', linkedin_link = '${linkedin}', description = '${desc}', path_photo_profile = '${path}' WHERE teams_id = ${id}`;
+    sql = `UPDATE teams SET name = '${name}', title = '${title}', twitter_link = '${twitter}', linkedin_link = '${linkedin}', description = "${desc}", path_photo_profile = '${path}' WHERE teams_id = ${id}`;
   }
   const result = await poolConnection.query(sql);
   return result[0];
