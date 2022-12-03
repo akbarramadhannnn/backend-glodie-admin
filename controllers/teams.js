@@ -12,7 +12,7 @@ const {
   selectTeamsByNameNotById,
 } = require("../models/teams");
 const {
-  ReplaceToStartUpperCase,
+  // ReplaceToStartUpperCase,
   ReplaceToLowerCaseNoSpace,
 } = require("../utils/replace");
 const teamsSchema = require("../models/schema/teams");
@@ -25,7 +25,7 @@ exports.createTeams = (req, res) => {
     let { name, title, twitterLink, linkedinLink, description } = fields;
     const { photo } = files;
 
-    name = ReplaceToStartUpperCase(name);
+    // name = ReplaceToStartUpperCase(name);
 
     if (!name) {
       return res.json(
@@ -172,7 +172,7 @@ exports.updateTeams = async (req, res) => {
       let { name, title, twitterLink, linkedinLink, description } = fields;
       const { photo } = files;
 
-      name = ReplaceToStartUpperCase(name);
+      // name = ReplaceToStartUpperCase(name);
 
       if (!name) {
         return res.json(
