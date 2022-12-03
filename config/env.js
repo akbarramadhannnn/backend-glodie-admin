@@ -6,7 +6,7 @@ module.exports = {
       ? "http://localhost:2022"
       : NODE_ENV === "stagging"
       ? "http://103.181.183.117:3022"
-      : "http://103.181.183.117:4022",
+      : "https://api-adminpanel.alglodieloggy.com",
   server: {
     port: NODE_ENV === "local" ? 2022 : NODE_ENV === "stagging" ? 3022 : 4022,
   },
